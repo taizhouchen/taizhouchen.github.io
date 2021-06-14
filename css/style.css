@@ -1339,3 +1339,21 @@ input[type="text"] {
 .sub-title{
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.project-entry{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.project-title{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: darkgrey;
+}
