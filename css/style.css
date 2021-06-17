@@ -1357,3 +1357,20 @@ a.disabled {
   cursor: default;
   color: darkgrey;
 }
+
+.project_img_entry{
+  margin-bottom: 1.5em;
+}
+
+.experiences_text{
+  margin-bottom: 0.5em;
+}
+
+.mobile_text_entry{
+  margin-bottom: 0.5em;
+}
+
+.experiences_entry{
+  margin-bottom: 3em;
+}
+
