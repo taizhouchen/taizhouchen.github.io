@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/style.css">
+	
 
 
 	<!-- Modernizr JS -->
@@ -50,51 +51,6 @@
 
 	</head>
 	<body>
-
-	<!-- <nav id="colorlib-main-nav" role="navigation">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-		<div class="js-fullheight colorlib-table">
-			<div class="colorlib-table-cell js-fullheight">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="form-group">
-							<input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
-							<button type="submit" class="btn btn-primary"><i class="icon-search3"></i></button>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="work.html">Work</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<h2 class="head-title">Works</h2>
-						<a href="images/work-1.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-1.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-2.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-2.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-3.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-3.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-						<a href="images/work-4.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-4.jpg);">
-							<span><i class="icon-search3"></i></span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav> -->
 	
 	<div id="colorlib-page">
 		<header>
@@ -158,34 +114,74 @@
 			</div>
 		</div>
 
-		<!-- <div id="colorlib-work">
+		<div id="colorlib-work">
 			<div class="container">
 				<div class="row text-center">
-					<h2 class="bold">Overview</h2>
+					<h2 class="bold">News</h2>
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading">
-						<span>Overview</span>
-						<h2 class="sub-title">Research Overview</h2>
+						<span>News</span>
+						<h2 class="sub-title">What's News</h2>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
 						<div class="rotate">
-							<h2 class="heading">Overview</h2>
+							<h2 class="heading">News</h2>
 						</div>
 					</div>
 				</div>
-
-				<div class="animate-box">
-					<div class="item text-center">
-						<img class="img-fluid" style="width:70%" src="images/ResearchScope.png"  >
+				<div class="row" id="news-items">
+					<div class="col-md-12">
+						<div class="news-list animate-box">
+							<div class="news-item"><font color="#ee5253"><strong>[NEW] </strong></font><font color="#3867d6"><strong>2025/03: </strong></font> Two papers was accepted by CHI 2025 LBW! Congrats to Yantao and Tianrui!</div>
+							<div class="news-item"><font color="#ee5253"><strong>[NEW] </strong></font><font color="#3867d6"><strong>2025/01: </strong></font> Visit VCC Lab at Shenzhen University! Nice talk with Zhida and Pedro!</div>
+							<div class="news-item"><font color="#ee5253"><strong>[NEW] </strong></font><font color="#3867d6"><strong>2024/11: </strong></font> Got a grant from @Natural Science Foundation of Guangdong Province - General Fund with 10,000 RMB!</div>
+							<div class="news-item"><font color="#3867d6"><strong>2024/09: </strong></font> Weirong Luo and Xiyun Luo join us as master students. Welcomes!</div>
+							<div class="news-item"><font color="#3867d6"><strong>2024/08: </strong></font> Got a grant from @Natural Science Foundation of China - Young Scientists Fund with 30,000 RMB!</div>
+							<div class="news-item hidden"><font color="#3867d6"><strong>2024/08: </strong></font> Visit Monash University! I gave talks at Sensi Lab, Embodied Visualisation Group, and Exertion Games Lab! <a href="https://sensilab.monash.edu/forums/multimodal-embodied-user-interface-for-natural-hci/" >Read more.</a></div>
+							<div class="news-item hidden"><font color="#3867d6"><strong>2024/07: </strong></font> I served as PC member at SIGGRAPH Aisa eTech 2025!</div>
+							<div class="news-item hidden"><font color="#3867d6"><strong>2024/01: </strong></font> Attended Scalable HCI Symposium 2024 at SUSTech!</div>
+							<div class="news-item hidden"><font color="#3867d6"><strong>2023/09: </strong></font> Yantao Liu join us as a master student. Welcomes!</div>
+						</div>
 					</div>
 				</div>
-
+				<div class="row text-center">
+					<button id="more-news-btn" class="btn btn-primary btn-outline animate-box" style="margin-top: 25px;">More</button>
+				</div>
 			</div>
 		</div>
-		 -->
+		
+		<script>
+			document.getElementById('more-news-btn').addEventListener('click', function() {
+            const button = this;
+            const hiddenItems = document.querySelectorAll('.news-item.hidden');
+            
+            // 立即显示所有元素（开始动画）
+            hiddenItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.2}s`;
+                item.classList.remove('hidden');
+            });
+
+            button.style.display = 'none';
+        });
+
+		</script>
+		
+		<style>
+			.news-item {
+				padding: 8px;
+				transition: all 0.4s ease-in-out;
+			}
+			.news-item.hidden {
+				opacity: 0;
+				transform: translateY(20px);
+				visibility: hidden;
+				transition: all 0.4s ease-in-out;
+			}
+		</style>
+
 
 		<div id="colorlib-work">
 			<div class="container">
@@ -205,13 +201,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="row">
-					<div class="col-md-12 animate-box ">
-						<div class="item text-center">
-							<img class="img-fluid project-entry" style="width:50%; margin-bottom:100px" src="images/ResearchScope.png"  >
-						</div>
-					</div>
-				</div> -->
 
 				<div class="row">
 					<div class="col-md-4">
