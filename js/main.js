@@ -98,6 +98,25 @@
 		}
 	};
 
+	$('#more-news-btn').on('click', function() {
+		const $button = $(this);
+		const $hiddenItems = $('.news-item.hidden');
+		
+		// 为每个元素添加动画
+		$hiddenItems.each(function(index) {
+			const $item = $(this);
+			
+			setTimeout(function(){
+				$item.removeClass('hidden');
+				$item.addClass('animated fadeInUp');
+				$item.css('transitionDelay', `${index * 0.2}s`); // 通过 CSS 控制延迟
+				console.log("Playing...", index);
+			}, index * 100);
+		});
+
+		$button.hide();
+	});
+
 	// // Owl Carousel
 	// var owlCarouselFeatureSlide = function() {
 	// 	var owl = $('.owl-carousel1');

@@ -1121,7 +1121,7 @@ header {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
     width: 20px;
     height: 2px;
     color: #000;
@@ -1373,5 +1373,16 @@ a.disabled {
 
 .experiences_entry{
   margin-bottom: 3em;
+}
+
+.news-item {
+  padding: 8px;
+  transition: none;
+}
+.news-item.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: none;
 }
 
